@@ -1,49 +1,94 @@
-# RandomWalk Data Science Assessment
+# Exploratory Data Analysis on Palmer Penguins Dataset
 
-## Instructions:
+## 📌 Overview
+This repository contains an exploratory data analysis (EDA) and preprocessing study performed on the **Palmer Penguins dataset**.  
+The project focuses on data cleaning, statistical analysis, visualization, outlier detection, normalization, and dimensionality reduction techniques to better understand penguin species characteristics.
 
-1) Fork the github repo into your personal Github account and take a clone into your local system.
+The analysis is implemented using Python and standard data science libraries.
 
-   Guide to Forking Github Repo: https://docs.github.com/en/github-ae@latest/get-started/quickstart/fork-a-repo
+---
 
-   Guide for cloning Github Repo: https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
+## 📂 Dataset
+- **Dataset Name:** Palmer Penguins
+- **Description:** Contains biological measurements of penguins from three species (*Adelie, Chinstrap, Gentoo*) collected from different islands.
+- **Features Include:**
+  - bill_length_mm
+  - bill_depth_mm
+  - flipper_length_mm
+  - body_mass_g
+  - species
+  - island
+  - sex
 
-2) Intantiate a Jupyter Notebook instance in the local working directory and create a notebook which answers the following questions.
+---
 
-   Guide for installing Jupyter Notebook in Local system: https://test-jupyter.readthedocs.io/en/latest/install.html
+## 🛠️ Technologies Used
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- SciPy
 
-3) Save the notebook and push it into forked Github github repo.
+---
 
-   Guide to pushing code into Github Repo: https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github
-   
-4) Record a screencast video recording demonstrating the solution in your system and upload the video into the forked github repo.
+## 📊 Analysis Tasks Performed
 
-   Guide to record screen in
+### Q1: Data Cleaning and Preprocessing
+- Identified missing and incorrect values
+- Handled missing data using appropriate strategies
+- Ensured data consistency and validity
 
-   a) MAC: https://support.apple.com/en-in/102618
+### Q2: Species-wise Statistical Analysis
+- Computed the **average body mass** for Gentoo penguins
 
-   b) Windows: https://www.microsoft.com/en-us/windows/learning-center/how-to-record-screen-windows-11
+### Q3: Distribution Analysis
+- Analyzed distributions of:
+  - `bill_length_mm`
+  - `bill_depth_mm`
+- Computed **skewness** and **kurtosis** for each species
+- Interpreted shape differences between distributions
 
-   c) Ubuntu: https://askubuntu.com/questions/4428/how-can-i-record-my-screen
-   
-5) Share the repository link into the Google Form: https://forms.gle/QCfjjyQQ5jnoegNe9
+### Q4: Outlier Detection
+- Identified outliers using statistical methods (IQR / Z-score)
+- Visualized outliers using boxplots and scatter plots
 
-## Questions:
+### Q5: Curse of Dimensionality & PCA
+- Evaluated whether the dataset suffers from the curse of dimensionality
+- Applied **Principal Component Analysis (PCA)**
+- Explained variance and dimensionality reduction results
 
-Q1: Identify missing or incorrect data in the dataset and apply appropriate preprocessing steps to clean it (code and explanation)
+### Q6: Data Visualization
+- Created **7 different visualizations** using:
+  - `bill_length_mm`
+  - `bill_depth_mm`
+- Used scatter plots, regression plots, KDE plots, and more
 
-Q2: What is the average body_mass_g for Gentoo penguins? (code)
+### Q7: Grouped Feature Analysis
+- Found maximum `flipper_length_mm` for each **species–island** combination
+- Identified which species has the longest flippers on each island
 
-Q3: How do the distributions of bill_length_mm and bill_depth_mm differ between the three penguin species? Analyze the skewness and kurtosis of each feature for different species. (code and explanation)
+### Q8: Feature Scaling
+- Performed **Z-score normalization** on numerical features
+- Prepared data for further machine learning tasks
 
-Q4: Identify which features in the dataset have outliers. Provide the method used to detect them and visualize the outliers. (code and explanation)
+---
 
-Q5: Does this dataset contribute to the curse of dimensionality? If yes perform PCA. (code and explanation required)
+## 📈 Visualizations
+The repository includes multiple plots to visualize:
+- Feature distributions
+- Species comparisons
+- Outliers
+- PCA projections
+- Relationship between bill measurements
 
-Q6: Use bill_length_mm vs bill_depth_mm and plot 7 different graphs to visualize them. (code)
+---
 
-Q7: Find the maximum flipper_length_mm for each combination of species and island. Which species has the longest flippers on each island? (code)
-
-Q8: Perform z-score normalization on this dataset. (code)
-
-
+## 📁 Repository Structure
+```text
+├── data/
+│   └── penguins.csv
+├── notebooks/
+│   └── penguins_eda.ipynb
+├── README.md
