@@ -1,24 +1,29 @@
 # Exploratory Data Analysis on Palmer Penguins Dataset
 
 ## 📌 Overview
-This repository contains an exploratory data analysis (EDA) and preprocessing study performed on the **Palmer Penguins dataset**.  
-The project focuses on data cleaning, statistical analysis, visualization, outlier detection, normalization, and dimensionality reduction techniques to better understand penguin species characteristics.
+This repository presents an exploratory data analysis (EDA) and preprocessing study conducted on a **subset of the Palmer Penguins dataset**.  
+The project focuses on cleaning raw data, performing statistical analysis, visualizing feature relationships, detecting outliers, applying normalization, and reducing dimensionality using PCA.
 
-The analysis is implemented using Python and standard data science libraries.
+A recorded execution video is included to demonstrate the complete workflow and outputs.
 
 ---
 
 ## 📂 Dataset
-- **Dataset Name:** Palmer Penguins
-- **Description:** Contains biological measurements of penguins from three species (*Adelie, Chinstrap, Gentoo*) collected from different islands.
-- **Features Include:**
-  - bill_length_mm
-  - bill_depth_mm
-  - flipper_length_mm
-  - body_mass_g
-  - species
-  - island
-  - sex
+- **File:** `penguins.csv`
+- **Source:** Palmer Penguins Dataset (subset)
+- **Description:**  
+  The dataset contains morphological measurements of penguins collected from Palmer Station, Antarctica. It includes species, island location, and physical characteristics such as bill dimensions, flipper length, and body mass.
+- **Species Included:** Adelie (subset used for analysis)
+- **Missing Values:** Present and handled during preprocessing.
+
+### Features
+- `species`
+- `island`
+- `bill_length_mm`
+- `bill_depth_mm`
+- `flipper_length_mm`
+- `body_mass_g`
+- `sex`
 
 ---
 
@@ -28,67 +33,46 @@ The analysis is implemented using Python and standard data science libraries.
 - NumPy
 - Matplotlib
 - Seaborn
-- Scikit-learn
 - SciPy
+- Scikit-learn
+- Jupyter Notebook
 
 ---
 
-## 📊 Analysis Tasks Performed
+## 📊 Analysis Performed
 
-### Q1: Data Cleaning and Preprocessing
-- Identified missing and incorrect values
-- Handled missing data using appropriate strategies
-- Ensured data consistency and validity
-
-### Q2: Species-wise Statistical Analysis
-- Computed the **average body mass** for Gentoo penguins
-
-### Q3: Distribution Analysis
-- Analyzed distributions of:
-  - `bill_length_mm`
-  - `bill_depth_mm`
-- Computed **skewness** and **kurtosis** for each species
-- Interpreted shape differences between distributions
-
-### Q4: Outlier Detection
-- Identified outliers using statistical methods (IQR / Z-score)
-- Visualized outliers using boxplots and scatter plots
-
-### Q5: Curse of Dimensionality & PCA
-- Evaluated whether the dataset suffers from the curse of dimensionality
-- Applied **Principal Component Analysis (PCA)**
-- Explained variance and dimensionality reduction results
-
-### Q6: Data Visualization
-- Created **7 different visualizations** using:
-  - `bill_length_mm`
-  - `bill_depth_mm`
-- Used scatter plots, regression plots, KDE plots, and more
-
-### Q7: Grouped Feature Analysis
-- Found maximum `flipper_length_mm` for each **species–island** combination
-- Identified which species has the longest flippers on each island
-
-### Q8: Feature Scaling
-- Performed **Z-score normalization** on numerical features
-- Prepared data for further machine learning tasks
+- Identified missing, null, and inconsistent values in the dataset and applied appropriate preprocessing techniques to clean the data.
+- Computed descriptive statistics, including the average body mass for Gentoo penguins.
+- Analyzed the distributions of bill length and bill depth across different penguin species by calculating skewness and kurtosis.
+- Detected outliers in numerical features using statistical methods such as the Interquartile Range (IQR) and Z-score.
+- Visualized outliers using boxplots and scatter plots for better interpretability.
+- Evaluated the dimensionality of the dataset and applied Principal Component Analysis (PCA) to reduce dimensions while preserving variance.
+- Generated multiple visualizations to explore the relationship between bill length and bill depth.
+- Grouped data by species and island to identify the maximum flipper length for each combination and compared species dominance per island.
+- Applied Z-score normalization to numerical features to standardize the dataset for further analysis.
 
 ---
 
 ## 📈 Visualizations
-The repository includes multiple plots to visualize:
-- Feature distributions
-- Species comparisons
-- Outliers
-- PCA projections
-- Relationship between bill measurements
+The notebook includes:
+- Distribution and density plots
+- Feature comparison plots across species
+- Outlier visualizations
+- PCA projection plots
+- Relationship plots between morphological features
+
+---
+
+## 🎥 Execution Demo
+- **File:** `video.mp4`
+- **Description:**  
+  A recorded walkthrough demonstrating the execution of the Jupyter Notebook, including data loading, preprocessing, visualization, and analysis outputs.
 
 ---
 
 ## 📁 Repository Structure
 ```text
-├── data/
-│   └── penguins.csv
-├── notebooks/
-│   └── penguins_eda.ipynb
 ├── README.md
+├── penguins.csv
+├── penguins_eda.ipynb
+└── video.mp4
